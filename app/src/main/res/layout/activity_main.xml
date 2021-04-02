@@ -6,36 +6,46 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+    <Button
+        android:id="@+id/collectImage"
+        android:text="Select"
+        android:layout_marginLeft="145dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Colored"/>
 
-    <ImageView
+    <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
         android:id="@+id/imageview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="4"
-        android:scaleType="centerInside"
+        android:scaleType = "center"
+
         />
-    <ImageView
+
+    <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
         android:id="@+id/imageview_result"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="4"
-        android:scaleType="centerInside"
+        android:scaleType="fitXY"
         />
     <Button
         android:id="@+id/buttonStart"
         android:layout_width="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Run Pan"
-    android:layout_height="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="150dp"
         android:layout_weight="1"
-
         android:textAllCaps="false" />.
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="1"        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
         android:visibility="invisible" />
 
     <Button
@@ -45,7 +55,9 @@
         android:layout_weight="1"
         android:layout_marginTop="20dp"
         android:text="Restart"
+        android:layout_marginLeft="150dp"
         android:textAllCaps="false" />
+
 
 
 </LinearLayout>
